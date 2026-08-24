@@ -1,0 +1,154 @@
+/* ============================================================
+   PhoneVault – inventory.css (3-Level Folder Drilldown Styles)
+   ============================================================ */
+
+.pv-folder-breadcrumb .breadcrumb-item a {
+    color: var(--pv-primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.pv-folder-breadcrumb .breadcrumb-item.active {
+    color: var(--pv-text-muted);
+    font-weight: 600;
+}
+
+/* Premium OS 3D Brand Folder Card */
+.pv-folder-card {
+    background: var(--pv-surface);
+    border: 1px solid var(--pv-border);
+    border-radius: 16px;
+    padding: 1.35rem 1.25rem 1.15rem;
+    box-shadow: var(--pv-shadow-sm);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pv-folder-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 5px;
+    background: var(--pv-primary);
+    border-radius: 0 0 6px 0;
+    transition: width 0.3s ease;
+}
+
+.pv-folder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.18);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+.pv-folder-card:hover::before {
+    width: 100%;
+}
+
+.pv-folder-brand-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(var(--pv-primary-rgb), 0.15) 0%, rgba(var(--pv-primary-rgb), 0.05) 100%);
+    border: 1px solid rgba(var(--pv-primary-rgb), 0.2);
+    color: var(--pv-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.65rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+
+.pv-folder-card:hover .pv-folder-brand-badge {
+    background: var(--pv-primary);
+    color: #ffffff;
+    transform: scale(1.1) rotate(-4deg);
+    box-shadow: 0 6px 16px rgba(var(--pv-primary-rgb), 0.35);
+}
+
+.pv-folder-stock-badge {
+    font-size: 0.775rem;
+    font-weight: 700;
+    padding: 0.35rem 0.75rem;
+    border-radius: 99px;
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+[data-theme="dark"] .pv-folder-stock-badge {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+}
+
+.pv-folder-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--pv-text);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.pv-folder-subtext {
+    font-size: 0.775rem;
+    color: var(--pv-text-muted);
+    font-weight: 500;
+}
+
+.pv-folder-stats {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--pv-text-muted);
+    background: rgba(var(--pv-primary-rgb), 0.04);
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    border: 1px dashed var(--pv-border);
+}
+
+.pv-folder-open-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    padding: 0.55rem 1rem;
+    border-radius: 10px;
+    background: rgba(var(--pv-primary-rgb), 0.08);
+    color: var(--pv-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.pv-folder-card:hover .pv-folder-open-btn {
+    background: var(--pv-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(var(--pv-primary-rgb), 0.3);
+}
+
+.pv-model-card {
+    background: var(--pv-surface);
+    border: 1px solid var(--pv-border);
+    border-radius: var(--pv-radius);
+    padding: 1.35rem;
+    box-shadow: var(--pv-shadow-sm);
+    cursor: pointer;
+    transition: all var(--pv-transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pv-model-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--pv-shadow);
+    border-color: var(--pv-primary);
+}

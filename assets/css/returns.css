@@ -1,0 +1,13 @@
+/* ============================================================
+   PhoneVault – returns.css (Returns & Refunds Styles)
+   ============================================================ */
+
+.pv-refund-reason-tag {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.775rem;
+    font-weight: 600;
+}

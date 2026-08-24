@@ -1,0 +1,26 @@
+/* ============================================================
+   PhoneVault – settings.css (Store Settings & Account Styles)
+   ============================================================ */
+
+.pv-settings-card {
+    background: var(--pv-surface);
+    border: 1px solid var(--pv-border);
+    border-radius: var(--pv-radius);
+    padding: 1.5rem;
+    box-shadow: var(--pv-shadow-sm);
+}
+
+.pv-settings-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--pv-border);
+}
+
+.pv-settings-card-header h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+}

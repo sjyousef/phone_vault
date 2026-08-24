@@ -1,0 +1,89 @@
+/* ============================================================
+   PhoneVault – footer.css (Dedicated Footer Component Styles)
+   ============================================================ */
+
+/* ---------- Fixed Bottom Plain Vanilla CSS Footer ---------- */
+.pv-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--pv-surface);
+    border-top: 1px solid var(--pv-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.75rem 1.75rem;
+    margin-left: 0;
+    transition: margin var(--pv-transition);
+}
+
+@media (min-width: 992px) {
+    .pv-footer {
+        margin-left: var(--pv-sidebar-w);
+    }
+}
+
+.pv-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.pv-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.pv-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--pv-text);
+}
+
+.pv-footer-logo i {
+    color: var(--pv-primary);
+}
+
+.pv-brand-accent {
+    color: var(--pv-primary);
+}
+
+.pv-footer-copy {
+    font-size: 0.8rem;
+    color: var(--pv-text-muted);
+}
+
+.pv-footer-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+[data-theme="dark"] .pv-footer-status-badge {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+}
+
+.pv-status-dot-online {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 6px #10b981;
+}

@@ -1,0 +1,31 @@
+/* ============================================================
+   PhoneVault – sales.css (POS Sales & Checkout Styles)
+   ============================================================ */
+
+.pv-pos-lookup-box {
+    background: rgba(var(--pv-primary-rgb), 0.05);
+    border: 1px dashed var(--pv-border);
+    border-radius: var(--pv-radius-sm);
+    padding: 1rem;
+}
+
+.pv-pos-total-display {
+    background: linear-gradient(135deg, var(--pv-primary) 0%, #4f46e5 100%);
+    color: #ffffff;
+    border-radius: var(--pv-radius-sm);
+    padding: 1.25rem;
+    box-shadow: 0 4px 14px rgba(var(--pv-primary-rgb), 0.35);
+}
+
+.pv-pos-total-display .total-label {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pv-pos-total-display .total-amount {
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+}

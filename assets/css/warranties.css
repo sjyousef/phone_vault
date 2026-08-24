@@ -1,0 +1,28 @@
+/* ============================================================
+   PhoneVault – warranties.css (Warranty Checker Styles)
+   ============================================================ */
+
+.pv-warranty-progress {
+    height: 8px;
+    border-radius: 99px;
+    background: rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+[data-theme="dark"] .pv-warranty-progress {
+    background: rgba(255,255,255,0.08);
+}
+
+.pv-warranty-progress-bar {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.4s ease;
+}
+
+.pv-warranty-progress-bar.active {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.pv-warranty-progress-bar.expired {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}

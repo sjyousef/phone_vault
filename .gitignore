@@ -1,0 +1,7 @@
+# Composer dependencies
+/vendor/
+
+# OS / Environment files
+.DS_Store
+Thumbs.db
+*.log
