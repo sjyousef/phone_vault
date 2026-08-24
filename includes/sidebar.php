@@ -1,11 +1,12 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 $nav = [
-    ['page' => 'index',      'icon' => 'fa-gauge-high',    'label' => 'Dashboard'],
-    ['page' => 'inventory',  'icon' => 'fa-mobile-screen', 'label' => 'Inventory'],
-    ['page' => 'sales',      'icon' => 'fa-cash-register', 'label' => 'Sales / POS'],
-    ['page' => 'warranties', 'icon' => 'fa-shield-halved', 'label' => 'Warranties'],
-    ['page' => 'returns',    'icon' => 'fa-rotate-left',   'label' => 'Returns & Refunds'],
+    ['page' => 'index',        'icon' => 'fa-gauge-high',      'label' => 'Dashboard'],
+    ['page' => 'inventory',    'icon' => 'fa-mobile-screen',   'label' => 'Inventory'],
+    ['page' => 'sales',        'icon' => 'fa-cash-register',   'label' => 'Sales / POS'],
+    ['page' => 'warranties',   'icon' => 'fa-shield-halved',   'label' => 'Warranties'],
+    ['page' => 'returns',      'icon' => 'fa-rotate-left',     'label' => 'Returns & Refunds'],
+    ['page' => 'students-js',  'icon' => 'fa-graduation-cap',  'label' => 'Student JS CRUD'],
 ];
 ?>
 <!-- Desktop Sidebar -->
