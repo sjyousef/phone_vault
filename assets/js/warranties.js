@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             '</div>' +
                             '<div class="mt-3"><div class="d-flex justify-content-between mb-1"><small>Invoice: <strong>' + escHtml(data.invoice_no) + '</strong></small><small>Customer: <strong>' + escHtml(data.customer_name) + '</strong></small></div>' +
                             '<div class="pv-warranty-bar"><div class="pv-warranty-fill ' + (expired ? 'expired' : '') + '" style="width:' + pct + '%"></div></div>' +
-                            '<div class="d-flex justify-content-between mt-1"><small class="text-muted">Sold: ' + escHtml(data.created_at) + '</small><small class="text-muted">Ends: ' + escHtml(data.warranty_end_date) + '</small></div></div>';
+                            '<div class="d-flex justify-content-between align-items-center mt-2 pt-2 border-top"><small class="text-muted"><i class="fa-regular fa-calendar me-1"></i>Sold: ' + escHtml(data.created_at) + '</small><span class="pv-badge-date ' + (expired ? 'expired' : 'active') + '"><i class="fa-solid fa-shield-halved me-1"></i>Ends: ' + escHtml(data.warranty_end_date) + '</span></div></div>';
                     } else {
                         warrantyResult.innerHTML = '<div class="pv-alert pv-alert-danger mb-0"><i class="fa-solid fa-circle-xmark"></i><span>No warranty record found for "<strong>' + escHtml(q) + '</strong>".</span></div>';
                     }
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     '<dt class="col-5">Phone</dt><dd class="col-7">' + escHtml(data.brand) + ' ' + escHtml(data.model) + '</dd>' +
                     '<dt class="col-5">IMEI</dt><dd class="col-7 font-mono">' + escHtml(data.imei) + '</dd>' +
                     '<dt class="col-5">Sold On</dt><dd class="col-7">' + escHtml(data.created_at) + '</dd>' +
-                    '<dt class="col-5">Warranty End</dt><dd class="col-7">' + escHtml(data.warranty_end_date) + '</dd>' +
+                    '<dt class="col-5">Warranty End</dt><dd class="col-7"><span class="pv-badge-date ' + (expired ? 'expired' : 'active') + '"><i class="fa-solid fa-shield-halved me-1"></i>' + escHtml(data.warranty_end_date) + '</span></dd>' +
                     '<dt class="col-5">Status</dt><dd class="col-7"><span class="pv-status ' + (expired ? 'pv-status-rejected' : 'pv-status-approved') + '">' + (expired ? 'Expired' : diff + ' days left') + '</span></dd>' +
                     '</dl>' +
                     '<div class="pv-warranty-bar"><div class="pv-warranty-fill ' + (expired ? 'expired' : '') + '" style="width:' + pct + '%"></div></div>';

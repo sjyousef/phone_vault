@@ -1211,3 +1211,79 @@ body {
         padding: 2.25rem 3rem;
     }
 }
+
+/* ---------- Warranty Badges & Dates ---------- */
+.pv-warranty-preview-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #4f46e5;
+    border-radius: 99px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.12);
+    animation: pvFadeIn 0.25s ease-out;
+}
+
+.pv-warranty-preview-badge i {
+    color: #6366f1;
+    font-size: 0.9rem;
+}
+
+.pv-warranty-preview-badge strong {
+    color: #3730a3;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .pv-warranty-preview-badge {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(139, 92, 246, 0.25) 100%);
+    border-color: rgba(165, 180, 252, 0.35);
+    color: #c7d2fe;
+    box-shadow: 0 2px 12px rgba(99, 102, 241, 0.25);
+}
+
+[data-theme="dark"] .pv-warranty-preview-badge i {
+    color: #818cf8;
+}
+
+[data-theme="dark"] .pv-warranty-preview-badge strong {
+    color: #ffffff;
+}
+
+.pv-badge-date {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(99, 102, 241, 0.08);
+    color: var(--pv-primary);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.pv-badge-date.active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border-color: rgba(16, 185, 129, 0.25);
+}
+
+.pv-badge-date.expired {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+[data-theme="dark"] .pv-badge-date.active {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+}
+
+[data-theme="dark"] .pv-badge-date.expired {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}

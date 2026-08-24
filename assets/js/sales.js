@@ -84,9 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!isNaN(days) && days > 0) {
                 const d = new Date();
                 d.setDate(d.getDate() + days);
-                warrantyEnd.textContent = 'Warranty ends: ' + d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+                const formattedDate = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+                warrantyEnd.innerHTML = '<div class="pv-warranty-preview-badge"><i class="fa-solid fa-shield-halved"></i> Warranty ends: <strong>' + formattedDate + '</strong></div>';
             } else {
-                warrantyEnd.textContent = '';
+                warrantyEnd.innerHTML = '';
             }
         };
 
