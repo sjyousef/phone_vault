@@ -64,20 +64,20 @@ INSERT IGNORE INTO users (full_name, username, password_hash, role) VALUES
 
 -- Seed: Phones
 INSERT IGNORE INTO phones (brand, model, imei, storage, color, battery_health, condition_grade, cost_price, selling_price, status) VALUES
-('Apple', 'iPhone 13', '354678901234567', '128GB', 'Midnight', 89, 'Grade A', 450.00, 620.00, 'Available'),
-('Apple', 'iPhone 12', '354678901234568', '64GB', 'Blue', 78, 'Grade B', 300.00, 420.00, 'Available'),
-('Samsung', 'Galaxy S22', '354678901234569', '256GB', 'Phantom Black', 92, 'Grade A', 380.00, 530.00, 'Available'),
-('Samsung', 'Galaxy A53', '354678901234570', '128GB', 'White', 65, 'Grade C', 150.00, 220.00, 'Available'),
-('Google', 'Pixel 7', '354678901234571', '128GB', 'Snow', 95, 'Grade A', 320.00, 460.00, 'Available'),
-('OnePlus', '10 Pro', '354678901234572', '256GB', 'Emerald Forest', 82, 'Grade B', 280.00, 390.00, 'Available'),
-('Apple', 'iPhone 11', '354678901234573', '64GB', 'Black', 71, 'Grade B', 220.00, 310.00, 'Sold'),
-('Samsung', 'Galaxy S21', '354678901234574', '128GB', 'Gray', 88, 'Grade A', 340.00, 480.00, 'Sold');
+('Apple', 'iPhone 13', '354678901234567', '128GB', 'Midnight', 89, 'Grade A', 22500.00, 28990.00, 'Available'),
+('Apple', 'iPhone 12', '354678901234568', '64GB', 'Blue', 78, 'Grade B', 14000.00, 18500.00, 'Available'),
+('Samsung', 'Galaxy S22', '354678901234569', '256GB', 'Phantom Black', 92, 'Grade A', 18500.00, 24500.00, 'Available'),
+('Samsung', 'Galaxy A53', '354678901234570', '128GB', 'White', 65, 'Grade C', 7000.00, 9800.00, 'Available'),
+('Google', 'Pixel 7', '354678901234571', '128GB', 'Snow', 95, 'Grade A', 15500.00, 21000.00, 'Available'),
+('OnePlus', '10 Pro', '354678901234572', '256GB', 'Emerald Forest', 82, 'Grade B', 13500.00, 17900.00, 'Available'),
+('Apple', 'iPhone 11', '354678901234573', '64GB', 'Black', 71, 'Grade B', 10500.00, 14200.00, 'Sold'),
+('Samsung', 'Galaxy S21', '354678901234574', '128GB', 'Gray', 88, 'Grade A', 14000.00, 18900.00, 'Sold');
 
 -- Seed: Sales
 INSERT IGNORE INTO sales (invoice_no, customer_name, customer_phone, phone_id, total_amount, payment_method, warranty_duration_days, warranty_end_date) VALUES
-('INV-20240001', 'John Smith', '555-0101', 7, 310.00, 'Cash', 30, DATE_ADD(CURDATE(), INTERVAL -10 DAY)),
-('INV-20240002', 'Jane Doe', '555-0102', 8, 480.00, 'Card', 90, DATE_ADD(CURDATE(), INTERVAL 45 DAY));
+('INV-20240001', 'John Smith', '555-0101', 7, 14200.00, 'Cash', 30, DATE_ADD(CURDATE(), INTERVAL -10 DAY)),
+('INV-20240002', 'Jane Doe', '555-0102', 8, 18900.00, 'Card', 90, DATE_ADD(CURDATE(), INTERVAL 45 DAY));
 
 -- Seed: Returns
 INSERT IGNORE INTO returns_refunds (sale_id, phone_id, refund_reason, defect_description, refund_amount, status) VALUES
-(1, 7, 'Battery drains too fast', 'Battery health dropped to 60% within 2 weeks of purchase', 310.00, 'Pending');
+(1, 7, 'Battery drains too fast', 'Battery health dropped to 60% within 2 weeks of purchase', 14200.00, 'Pending');
