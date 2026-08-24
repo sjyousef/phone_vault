@@ -1,6 +1,6 @@
 <?php
 /* ============================================================
-   API: Get Single Student Record for Editing
+   API: Get Single Phone Record for Editing
    ============================================================ */
 
 include __DIR__ . '/../config.php';
@@ -11,21 +11,21 @@ $id = (int)($_GET['id'] ?? 0);
 
 if ($id <= 0) {
     http_response_code(400);
-    echo json_encode(['status' => 'error', 'message' => 'Invalid student ID.']);
+    echo json_encode(['status' => 'error', 'message' => 'Invalid phone ID.']);
     exit;
 }
 
 try {
     $pdo = getPDO();
-    $stmt = $pdo->prepare("SELECT id, name, course FROM students WHERE id = ? LIMIT 1");
+    $stmt = $pdo->prepare("SELECT id, brand, model, imei, storage, color, battery_health, condition_grade, cost_price, selling_price, status FROM phones WHERE id = ? LIMIT 1");
     $stmt->execute([$id]);
-    $student = $stmt->fetch(PDO::FETCH_ASSOC);
+    $phone = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($student) {
-        echo json_encode($student);
+    if ($phone) {
+        echo json_encode($phone);
     } else {
         http_response_code(404);
-        echo json_encode(['status' => 'error', 'message' => 'Student record not found.']);
+        echo json_encode(['status' => 'error', 'message' => 'Phone record not found.']);
     }
 } catch (Exception $e) {
     http_response_code(500);
